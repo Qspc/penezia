@@ -15,7 +15,7 @@ const features = [
   {
     icon: Palette,
     title: "Custom Desain Bebas",
-    desc: "Desain full custom — logo, nomor punggung, nama pemain, pattern, warna bebas. Tim desainer kami siap membantu.",
+    desc: "Desain full custom, logo, nomor punggung, nama pemain, pattern, warna bebas. Tim desainer kami siap membantu.",
     color: "#ff3c00",
   },
   {
@@ -81,7 +81,7 @@ export default function KeunggulanSection() {
             KEUNGGULAN <span className="gradient-text">KAMI</span>
           </h2>
           <p className="text-[#8888a0] text-lg max-w-xl mx-auto">
-            Kami bukan sekadar percetakan biasa — kami partner terpercaya untuk seragam tim & bisnis
+            Kami bukan sekadar percetakan biasa, kami partner terpercaya untuk seragam tim & bisnis
             Anda
           </p>
         </motion.div>

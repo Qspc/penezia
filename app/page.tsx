@@ -12,7 +12,7 @@ export default function Home() {
       <MarqueeTicker />
       <KeunggulanSection />
       <KatalogSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <KontakSection />
     </main>
   );

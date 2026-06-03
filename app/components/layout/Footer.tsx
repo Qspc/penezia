@@ -1,6 +1,7 @@
 "use client";
 
 import { Zap, Camera, MessageCircle, Video } from "lucide-react";
+import { LinkInstagram, LinkTiktok, LinkWhatsapp } from "../environment/contact";
 
 const navLinks = [
   { label: "Beranda", href: "#hero" },
@@ -19,16 +20,16 @@ const products = [
 ];
 
 const socials = [
-  { icon: MessageCircle, href: "https://wa.me/6281234567890", label: "WhatsApp", color: "#25d366" },
+  { icon: MessageCircle, href: LinkWhatsapp, label: "WhatsApp", color: "#25d366" },
   {
     icon: Camera,
-    href: "https://instagram.com/printcraft.id",
+    href: LinkInstagram,
     label: "Instagram",
     color: "#e1306c",
   },
   {
     icon: Video,
-    href: "https://tiktok.com/@printcraft.official",
+    href: LinkTiktok,
     label: "TikTok",
     color: "#69c9d0",
   },
@@ -46,11 +47,12 @@ export default function Footer() {
               <Zap size={18} className="text-white fill-white" />
             </div>
             <span className="font-display text-2xl text-white tracking-widest">
-              PRINT<span className="text-[#ff3c00]">CRAFT</span>
+              PENEZIA
+              {/* <span className="text-[#ff3c00]">CRAFT</span> */}
             </span>
           </a>
           <p className="text-[#555566] text-sm leading-relaxed max-w-xs mb-6">
-            Percetakan pakaian custom terpercaya sejak 2018. Melayani ribuan pelanggan dari seluruh
+            Percetakan custom terpercaya sejak 2018. Melayani ribuan pelanggan dari seluruh
             Indonesia dengan kualitas premium dan harga bersahabat.
           </p>
           <div className="flex gap-3">
@@ -112,9 +114,9 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/5 py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-[#444454] text-xs">
-          <span>© {new Date().getFullYear()} PrintCraft. All rights reserved.</span>
-          <span>Made with ❤️ in Bandung, Indonesia</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-3 text-[#444454] text-xs">
+          <span>© {new Date().getFullYear()} Qpsc. All rights reserved.</span>
+          {/* <span>Made with ❤️ in Bandung, Indonesia</span> */}
         </div>
       </div>
     </footer>

@@ -1,57 +1,63 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { MapPin, Phone, Clock, Camera, MessageCircle, Video } from 'lucide-react';
+import { motion } from "framer-motion";
+import { MapPin, Phone, Clock, Camera, MessageCircle, Video } from "lucide-react";
+import {
+  ContactInstagram,
+  ContactWhatsapp,
+  LinkInstagram,
+  LinkWhatsapp,
+} from "../environment/contact";
 
 const socials = [
   {
     icon: MessageCircle,
-    platform: 'WhatsApp',
-    handle: '+62 812-3456-7890',
-    desc: 'Chat langsung & konsultasi order',
-    color: '#25d366',
-    bg: '#00150a',
-    href: 'https://wa.me/6281234567890',
+    platform: "WhatsApp",
+    handle: ContactWhatsapp,
+    desc: "Chat langsung & konsultasi order",
+    color: "#25d366",
+    bg: "#00150a",
+    href: LinkWhatsapp,
   },
   {
     icon: Camera,
-    platform: 'Instagram',
-    handle: '@printcraft.id',
-    desc: 'Lihat portfolio & update terbaru',
-    color: '#e1306c',
-    bg: '#1a0010',
-    href: 'https://instagram.com/printcraft.id',
+    platform: "Instagram",
+    handle: ContactInstagram,
+    desc: "Lihat portfolio & update terbaru",
+    color: "#e1306c",
+    bg: "#1a0010",
+    href: LinkInstagram,
   },
   {
     icon: Video,
-    platform: 'TikTok',
-    handle: '@printcraft.official',
-    desc: 'Behind the scenes produksi kami',
-    color: '#69c9d0',
-    bg: '#001518',
-    href: 'https://tiktok.com/@printcraft.official',
+    platform: "TikTok",
+    handle: "@penezia.official",
+    desc: "Behind the scenes produksi kami",
+    color: "#69c9d0",
+    bg: "#001518",
+    href: "https://tiktok.com/@printcraft.official",
   },
 ];
 
 const infos = [
   {
     icon: MapPin,
-    label: 'Alamat',
-    value: 'Jl. Industri Raya No. 88, Bandung, Jawa Barat 40512',
-    color: '#ff3c00',
+    label: "Alamat",
+    value: "Kp.Neglasari RT 011/002 Desa Jatiluhur Kec Jatiluhur, Purwakarta 41152",
+    color: "#ff3c00",
   },
   {
     icon: Phone,
-    label: 'Telepon',
-    value: '+62 812-3456-7890',
-    color: '#f5c542',
+    label: "Telepon",
+    value: ContactWhatsapp,
+    color: "#f5c542",
   },
-  {
-    icon: Clock,
-    label: 'Jam Operasional',
-    value: 'Senin – Sabtu: 08.00 – 17.00 WIB',
-    color: '#60a5fa',
-  },
+  // {
+  //   icon: Clock,
+  //   label: "Jam Operasional",
+  //   value: "Senin – Sabtu: 08.00 – 17.00 WIB",
+  //   color: "#60a5fa",
+  // },
 ];
 
 export default function KontakSection() {
@@ -76,7 +82,7 @@ export default function KontakSection() {
             KONTAK & <span className="gradient-text">LOKASI</span>
           </h2>
           <p className="text-[#8888a0] text-lg max-w-xl mx-auto">
-            Siap melayani pertanyaan, konsultasi, dan pesanan Anda 6 hari seminggu
+            Siap melayani pertanyaan, konsultasi, dan pesanan Anda.
           </p>
         </motion.div>
 
@@ -136,12 +142,17 @@ export default function KontakSection() {
                   <div key={i} className="flex gap-4 items-start">
                     <div
                       className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
-                      style={{ backgroundColor: `${info.color}15`, border: `1px solid ${info.color}30` }}
+                      style={{
+                        backgroundColor: `${info.color}15`,
+                        border: `1px solid ${info.color}30`,
+                      }}
                     >
                       <Icon size={16} style={{ color: info.color }} />
                     </div>
                     <div>
-                      <div className="text-[#555566] text-xs font-medium uppercase tracking-wider mb-0.5">{info.label}</div>
+                      <div className="text-[#555566] text-xs font-medium uppercase tracking-wider mb-0.5">
+                        {info.label}
+                      </div>
                       <div className="text-white text-sm font-medium">{info.value}</div>
                     </div>
                   </div>
@@ -159,14 +170,17 @@ export default function KontakSection() {
             className="relative rounded-2xl overflow-hidden border border-white/8 h-[420px] lg:h-full min-h-[400px]"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.02785955898!2d107.57254174999999!3d-6.921463849999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              src="https://www.google.com/maps?q=Kp.Neglasari+RT+011/002+Desa+Jatiluhur+Kec+Jatiluhur+Purwakarta+41152&output=embed"
               width="100%"
               height="100%"
-              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(0.9) brightness(0.8)' }}
+              style={{
+                border: 0,
+                filter: "invert(90%) hue-rotate(180deg) contrast(0.9) brightness(0.8)",
+              }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Lokasi PrintCraft Bandung"
+              title="Lokasi Penezia"
             />
             {/* Overlay label */}
             <div className="absolute bottom-4 left-4 bg-[#0a0a0f]/90 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3">
@@ -174,8 +188,8 @@ export default function KontakSection() {
                 <MapPin size={14} className="text-white" />
               </div>
               <div>
-                <div className="text-white text-sm font-semibold">PrintCraft Studio</div>
-                <div className="text-[#8888a0] text-xs">Bandung, Jawa Barat</div>
+                <div className="text-white text-sm font-semibold">Penezia</div>
+                <div className="text-[#8888a0] text-xs">Purwakarta, Jawa Barat</div>
               </div>
             </div>
           </motion.div>

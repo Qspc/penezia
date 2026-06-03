@@ -5,13 +5,13 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "PrintCraft — Percetakan Pakaian Custom Premium Indonesia",
+  title: "PENEZIA Percetakan Sahabat Custom Purwakarta",
   description:
-    "PrintCraft adalah solusi percetakan pakaian custom terpercaya: jersey, kemeja PDH, kaos polo, jaket, rompi, dan kaos. Bahan premium, harga terjangkau, kirim ke seluruh Indonesia.",
+    "Penezia adalah solusi percetakan pakaian custom terpercaya: jersey, kemeja PDH, kaos polo, jaket, rompi, dan kaos. Bahan premium, harga terjangkau, kirim ke seluruh Indonesia.",
   keywords:
     "percetakan custom, jersey custom, kemeja PDH, seragam tim, sablon kaos, konveksi bandung",
   openGraph: {
-    title: "PrintCraft — Percetakan Pakaian Custom Premium",
+    title: "PENEZIA Percetakan Sahabat Custom Purwakarta",
     description: "Jersey, PDH, Polo, Jaket, Rompi & Kaos Custom berkualitas. Pesan sekarang!",
     type: "website",
   },

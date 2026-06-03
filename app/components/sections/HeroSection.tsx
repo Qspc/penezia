@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Star } from "lucide-react";
+import { LinkWhatsapp } from "../environment/contact";
 
 const stats = [
   { value: "5000+", label: "Pelanggan Puas" },
@@ -91,7 +92,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 bg-white/5 border border-[#ff3c00]/30 text-[#ff7c40] text-sm font-medium px-4 py-2 rounded-full mb-8 backdrop-blur-sm"
           >
             <Star size={14} className="fill-[#f5c542] text-[#f5c542]" />
-            <span>#1 Percetakan Custom di Indonesia</span>
+            <span>Sahabat Custom Purwakarta</span>
           </motion.div>
 
           {/* Headline */}
@@ -103,7 +104,7 @@ export default function HeroSection() {
           >
             <span className="block text-white">SERAGAM</span>
             <span className="block gradient-text">CUSTOM</span>
-            <span className="block text-white/80">BERKELAS</span>
+            <span className="block text-white/80">SPESIALIST</span>
           </motion.h1>
 
           {/* Subtext */}
@@ -125,7 +126,7 @@ export default function HeroSection() {
             className="flex flex-wrap gap-4 mb-16"
           >
             <a
-              href="https://wa.me/6281234567890?text=Halo%20PrintCraft%2C%20saya%20ingin%20pesan%20seragam%20custom"
+              href={`${LinkWhatsapp}?text=Halo%20PENEZIA%2C%20saya%20mau%20pesan%20seragam%20custom`}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2.5 bg-[#ff3c00] hover:bg-[#ff5a1f] text-white font-semibold text-base px-7 py-4 rounded-2xl transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-[#ff3c00]/35"

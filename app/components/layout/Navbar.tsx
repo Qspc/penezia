@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Zap } from "lucide-react";
+import { LinkWhatsapp } from "../environment/contact";
 
 const navLinks = [
   { label: "Beranda", href: "#hero" },
@@ -40,7 +41,8 @@ export default function Navbar() {
               <Zap size={18} className="text-white fill-white" />
             </div>
             <span className="font-display text-2xl text-white tracking-widest">
-              PRINT<span className="text-[#ff3c00]">CRAFT</span>
+              PENEZIA
+              {/* <span className="text-[#ff3c00]">CRAFT</span> */}
             </span>
           </a>
 
@@ -62,7 +64,7 @@ export default function Navbar() {
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/6281234567890?text=Halo%20PrintCraft%2C%20saya%20mau%20pesan%20seragam%20custom"
+              href={`${LinkWhatsapp}?text=Halo%20PENEZIA%2C%20saya%20mau%20pesan%20seragam%20custom`}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-2 bg-[#ff3c00] hover:bg-[#ff5a1f] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-[#ff3c00]/30"
@@ -104,7 +106,7 @@ export default function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="https://wa.me/6281234567890"
+              href={LinkWhatsapp}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
