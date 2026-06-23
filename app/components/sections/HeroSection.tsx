@@ -64,10 +64,10 @@ export default function HeroSection() {
 
       {/* Floating jersey decorations */}
       <div
-        className="absolute right-8 top-24 md:right-16 lg:right-32 opacity-20 md:opacity-30 animate-float"
+        className="absolute right-8 top-24 md:right-16 lg:top-48 lg:right-64 opacity-20 md:opacity-30 animate-float"
         style={{ animationDelay: "0s" }}
       >
-        <JerseyShape className="w-32 h-36 md:w-48 md:h-56 text-[#ff3c00]/40" />
+        <JerseyShape className="w-32 h-36 md:w-64 md:h-72 text-[#ff3c00]/40" />
       </div>
       <div
         className="absolute left-4 bottom-32 md:left-12 opacity-10 md:opacity-20 animate-float"
@@ -82,8 +82,8 @@ export default function HeroSection() {
         <JerseyShape className="w-16 h-20 text-white/20" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="max-w-4xl">
+      <div className="relative z-10 min-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="min-w-6xl">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -112,10 +112,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-[#8888a0] text-lg md:text-xl max-w-xl mb-10 leading-relaxed"
+            className="text-[#8888a0] text-lg md:text-xl max-w-5xl mb-10 leading-relaxed"
           >
             Wujudkan identitas tim & bisnis Anda dengan jersey, kemeja PDH, polo, jaket, dan kaos
-            premium — desain bebas, bahan terbaik, pengiriman ke seluruh Indonesia.
+            premium dengan desain bebas, bahan terbaik, pengiriman ke seluruh Indonesia.
           </motion.p>
 
           {/* CTA Buttons */}

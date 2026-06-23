@@ -1,7 +1,8 @@
 "use client";
 
-import { Zap, Camera, MessageCircle, Video } from "lucide-react";
+import { Zap, Camera, MessageCircle, Music2 } from "lucide-react";
 import { LinkInstagram, LinkTiktok, LinkWhatsapp } from "../environment/contact";
+import { useRouter } from "next/navigation";
 
 const navLinks = [
   { label: "Beranda", href: "#hero" },
@@ -28,7 +29,7 @@ const socials = [
     color: "#e1306c",
   },
   {
-    icon: Video,
+    icon: Music2,
     href: LinkTiktok,
     label: "TikTok",
     color: "#69c9d0",
@@ -36,6 +37,7 @@ const socials = [
 ];
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <footer className="relative border-t border-white/6 bg-[#080808]">
       {/* Top section */}
@@ -114,9 +116,19 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/5 py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-3 text-[#444454] text-xs">
-          <span>© {new Date().getFullYear()} Qpsc. All rights reserved.</span>
-          {/* <span>Made with ❤️ in Bandung, Indonesia</span> */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center gap-3 text-[#444454] text-xs">
+          <p>© {new Date().getFullYear()} Penezia. All rights reserved.</p>
+          <p>
+            Developed by{" "}
+            <a
+              href="https://qspc.github.io/cv/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#ff3c00] cursor-pointer"
+            >
+              Qspc
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -7,6 +7,8 @@ import {
   ContactWhatsapp,
   LinkInstagram,
   LinkWhatsapp,
+  LinkTiktok,
+  ContactTiktok,
 } from "../environment/contact";
 
 const socials = [
@@ -31,11 +33,11 @@ const socials = [
   {
     icon: Video,
     platform: "TikTok",
-    handle: "@penezia.official",
+    handle: ContactTiktok,
     desc: "Behind the scenes produksi kami",
     color: "#69c9d0",
     bg: "#001518",
-    href: "https://tiktok.com/@printcraft.official",
+    href: LinkTiktok,
   },
 ];
 
