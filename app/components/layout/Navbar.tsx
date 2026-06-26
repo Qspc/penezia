@@ -8,6 +8,7 @@ import { LinkWhatsapp } from "../environment/contact";
 const navLinks = [
   { label: "Beranda", href: "#hero" },
   { label: "Keunggulan", href: "#keunggulan" },
+  { label: "Produksi", href: "#produksi" },
   { label: "Katalog", href: "#katalog" },
   { label: "Kontak", href: "#kontak" },
 ];

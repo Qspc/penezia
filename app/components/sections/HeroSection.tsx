@@ -129,14 +129,14 @@ export default function HeroSection() {
               href={`${LinkWhatsapp}?text=Halo%20PENEZIA%2C%20saya%20mau%20pesan%20seragam%20custom`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2.5 bg-[#ff3c00] hover:bg-[#ff5a1f] text-white font-semibold text-base px-7 py-4 rounded-2xl transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-[#ff3c00]/35"
+              className="group inline-flex items-center gap-2.5 bg-[#ff3c00] hover:bg-[#ff5a1f] text-white font-semibold text-base md:px-7 px-4 md:py-4 py-3 rounded-2xl transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-[#ff3c00]/35"
             >
               Pesan Sekarang
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#katalog"
-              className="group inline-flex items-center gap-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-semibold text-base px-7 py-4 rounded-2xl transition-all duration-200"
+              className="group inline-flex items-center gap-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-semibold text-base md:px-7 px-4 md:py-4 py-3 rounded-2xl transition-all duration-200"
             >
               <Play size={16} className="fill-white" />
               Lihat Katalog
