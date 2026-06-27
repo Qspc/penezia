@@ -309,7 +309,7 @@ const products = [
     desc: "Jersey futsal, basket, voli, & sepak bola. Full sublimasi, custom nama & nomor.",
     tag: "Best Seller",
     tagColor: "#ff3c00",
-    Illustration: JerseyIllustration,
+    Illustration: "/galeri/katalog/foto-jersey-1.jpeg",
     bgFrom: "#200a00",
     bgTo: "#3a1000",
     minOrder: "Min. 6 pcs",
@@ -320,7 +320,7 @@ const products = [
     desc: "Kemeja seragam instansi & perusahaan. Bordir logo, lengan panjang/pendek.",
     tag: "Populer",
     tagColor: "#3b82f6",
-    Illustration: KemejaPDHIllustration,
+    Illustration: "/galeri/katalog/foto-kameja-1.jpeg",
     bgFrom: "#000d20",
     bgTo: "#001a3a",
     minOrder: "Min. 12 pcs",
@@ -331,40 +331,40 @@ const products = [
     desc: "Polo shirt premium untuk seragam kantor, komunitas, dan event korporat.",
     tag: "Premium",
     tagColor: "#10b981",
-    Illustration: KaosPoloIllustration,
+    Illustration: "/galeri/katalog/foto-polo-1.jpeg",
     bgFrom: "#001a0d",
     bgTo: "#00301a",
     minOrder: "Min. 12 pcs",
-    startPrice: "Rp 75.000",
+    startPrice: "Rp 85.000",
   },
   {
-    name: "Jaket Custom",
+    name: "Jaket",
     desc: "Jaket varsity, bomber, dan windbreaker. Custom patch, bordir, & zipper.",
     tag: "Eksklusif",
     tagColor: "#f5c542",
-    Illustration: JaketIllustration,
+    Illustration: "/galeri/katalog/foto-jaket-1.jpeg",
     bgFrom: "#0f0d0b",
     bgTo: "#1f1b18",
     minOrder: "Min. 6 pcs",
-    startPrice: "Rp 145.000",
+    startPrice: "Rp 150.000",
   },
   {
-    name: "Rompi Tactical",
+    name: "Rompi",
     desc: "Rompi multi-pocket untuk industri, logistik, & lapangan. Bahan Taslan tebal.",
     tag: "Industri",
     tagColor: "#c084fc",
-    Illustration: RompiIllustration,
+    Illustration: "/galeri/katalog/foto-rompi-1.jpeg",
     bgFrom: "#0d0520",
     bgTo: "#1a0a38",
     minOrder: "Min. 6 pcs",
-    startPrice: "Rp 125.000",
+    startPrice: "Rp 95.000",
   },
   {
     name: "Kaos Custom",
     desc: "Kaos sablon DTF, screen printing, & sublimasi. Cocok untuk merchandise & event.",
     tag: "Serba Bisa",
     tagColor: "#f43f5e",
-    Illustration: KaosIllustration,
+    Illustration: "/galeri/katalog/foto-kaos-1.jpeg",
     bgFrom: "#1a0008",
     bgTo: "#2d0010",
     minOrder: "Min. 12 pcs",
@@ -434,7 +434,7 @@ export default function KatalogSection() {
                 }}
               >
                 {/* Tag */}
-                <div
+                {/* <div
                   className="absolute top-4 left-4 z-10 text-xs font-semibold px-2.5 py-1 rounded-full"
                   style={{
                     backgroundColor: `${product.tagColor}25`,
@@ -443,18 +443,31 @@ export default function KatalogSection() {
                   }}
                 >
                   {product.tag}
-                </div>
+                </div> */}
 
                 {/* Illustration area */}
-                <div className="relative flex items-center justify-center h-52 p-6 overflow-hidden">
+                <div className="relative flex items-center justify-center h-72 lg:h-80 p-6 overflow-hidden">
                   <div
                     className="absolute inset-0 opacity-10"
                     style={{
                       background: `radial-gradient(circle at 50% 60%, ${product.tagColor}, transparent 70%)`,
                     }}
                   />
-                  <div className="relative z-10 h-36 w-28 group-hover:scale-110 transition-transform duration-500">
-                    <Illustration />
+                  <div className="relative z-10 w-full h-full flex items-center justify-center">
+                    <img
+                      src={product.Illustration}
+                      alt={product.name}
+                      className="
+      w-[90%]
+      max-w-[280px]
+      object-contain
+      drop-shadow-[0_30px_40px_rgba(0,0,0,.45)]
+      transition-all
+      duration-500
+      group-hover:scale-110
+      group-hover:-translate-y-2
+    "
+                    />
                   </div>
                 </div>
 
@@ -466,8 +479,10 @@ export default function KatalogSection() {
                   </div>
                   <div className="flex items-center justify-between text-sm mt-auto pt-3 border-t border-white/6">
                     <div>
-                      <span className="text-[#8888a0] text-xs">{product.minOrder}</span>
-                      <div className="text-white font-semibold">Mulai {product.startPrice}</div>
+                      {/* <span className="text-[#8888a0] text-xs">{product.minOrder}</span> */}
+                      <div className="text-white text-lg font-semibold">
+                        Mulai {product.startPrice}
+                      </div>
                     </div>
                     <a
                       href={`${waBase}?${waMsg}`}

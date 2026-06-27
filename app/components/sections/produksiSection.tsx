@@ -3,36 +3,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, Factory, Package, ShieldCheck, Truck } from "lucide-react";
 
-const stats = [
-  {
-    number: "10+",
-    label: "Tahun Pengalaman",
-    icon: Factory,
-  },
-  {
-    number: "5.000+",
-    label: "Pesanan Selesai",
-    icon: Package,
-  },
-  {
-    number: "100.000+",
-    label: "Produk Diproduksi",
-    icon: ShieldCheck,
-  },
-  {
-    number: "Seluruh",
-    label: "Indonesia",
-    icon: Truck,
-  },
-];
-
-const checklist = [
-  "Printing menggunakan mesin berkualitas tinggi",
-  "Dijahit oleh tenaga berpengalaman",
-  "Quality Control sebelum pengiriman",
-  "Packing rapi dan aman",
-];
-
 export default function ProductionSection() {
   return (
     <section id="produksi" className="relative py-28 overflow-hidden bg-[#0a0a0f]">
@@ -66,111 +36,89 @@ export default function ProductionSection() {
 
         {/* ================= CONTENT ================= */}
 
-        <div className="grid lg:grid-cols-3 gap-6 items-start">
+        <div className="grid lg:grid-cols-[1fr_1.47fr] gap-6 items-start">
           {/* VIDEO */}
-
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 relative rounded-3xl overflow-hidden border border-white/10 bg-[#111118]"
+            className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#111118] group"
           >
             <video
               autoPlay
               muted
               loop
               playsInline
-              className="w-full h-full object-cover aspect-video"
+              className="w-full aspect-[9/16] object-cover transition-transform duration-700 group-hover:scale-105"
             >
               <source src="/galeri/produksi/produksi-video-1.mp4" type="video/mp4" />
             </video>
 
+            {/* Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
             {/* Badge */}
-
             <div className="absolute top-5 left-5">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 backdrop-blur border border-white/10">
-                <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
-
-                <span className="text-white text-sm font-medium">Produksi Sedang Berlangsung</span>
+              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-2 backdrop-blur">
+                <span className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-sm font-medium text-white">Produksi Printing</span>
               </div>
             </div>
           </motion.div>
 
-          {/* IMAGES */}
-
+          {/* PHOTOS */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="grid gap-6"
           >
-            <img
-              src="/galeri/produksi/produksi-foto-1.jpeg"
-              className="rounded-3xl border border-white/10 object-cover aspect-[4/3]"
-            />
-
-            <img
-              src="/galeri/produksi/produksi-foto-2.jpeg"
-              className="rounded-3xl border border-white/10 object-cover aspect-[4/3]"
-            />
-          </motion.div>
-        </div>
-
-        {/* ================= INFO ================= */}
-
-        {/* <div className="grid lg:grid-cols-2 gap-12 mt-16 items-center">
-
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-3xl font-display text-white mb-8">
-              Setiap Produk Diproses Dengan Teliti
-            </h3>
-
-            <div className="space-y-5">
-              {checklist.map((item, i) => (
-                <div key={i} className="flex items-start gap-4">
-                  <CheckCircle2 size={22} className="text-[#ff3c00] mt-0.5 flex-shrink-0" />
-
-                  <p className="text-[#b5b5c3] text-base leading-relaxed">{item}</p>
+            {/* Hero Photo */}
+            <div className="group relative overflow-hidden rounded-3xl border border-white/10">
+              <img
+                src="/galeri/produksi/produksi-foto-1.jpeg"
+                className="w-full aspect-[16/9] object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute top-5 left-5">
+                <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-2 backdrop-blur">
+                  <span className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
+                  <span className="text-sm font-medium text-white">Produksi Jahit</span>
                 </div>
-              ))}
+              </div>
+            </div>
+
+            {/* Bottom Photos */}
+            <div className="grid grid-cols-2 gap-6">
+              <div className="group relative overflow-hidden rounded-3xl border border-white/10">
+                <img
+                  src="/galeri/produksi/produksi-foto-2.jpeg"
+                  className="w-full aspect-[4/5] object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute top-5 left-5">
+                  <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-2 backdrop-blur">
+                    <span className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
+                    <span className="text-sm font-medium text-white">Produksi Jahit Otomatis</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative overflow-hidden rounded-3xl border border-white/10">
+                <img
+                  src="/galeri/produksi/produksi-foto-3.jpeg"
+                  className="w-full aspect-[4/5] object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute top-5 left-5">
+                  <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-2 backdrop-blur">
+                    <span className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
+                    <span className="text-sm font-medium text-white">Produksi Packing</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
-
-
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 gap-5"
-          >
-            {stats.map((item, i) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={i}
-                  className="group rounded-2xl bg-[#111118] border border-white/6 p-6 hover:border-[#ff3c00]/40 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-[#ff3c00]/10 flex items-center justify-center mb-5">
-                    <Icon size={22} className="text-[#ff3c00]" />
-                  </div>
-
-                  <h4 className="text-4xl font-bold text-white mb-2">{item.number}</h4>
-
-                  <p className="text-[#8888a0]">{item.label}</p>
-                </div>
-              );
-            })}
-          </motion.div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
