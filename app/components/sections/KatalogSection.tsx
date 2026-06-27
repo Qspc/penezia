@@ -324,7 +324,7 @@ const products = [
     bgFrom: "#000d20",
     bgTo: "#001a3a",
     minOrder: "Min. 12 pcs",
-    startPrice: "Rp 95.000",
+    startPrice: "Rp 130.000",
   },
   {
     name: "Kaos Polo",
@@ -368,7 +368,40 @@ const products = [
     bgFrom: "#1a0008",
     bgTo: "#2d0010",
     minOrder: "Min. 12 pcs",
-    startPrice: "Rp 45.000",
+    startPrice: "Rp 55.000",
+  },
+  {
+    name: "Kemeja K3 (Safety)",
+    desc: "Kemeja seragam untuk keamanan. Bordir logo, lengan panjang/pendek.",
+    tag: "Eksklusif",
+    tagColor: "#ff3c00",
+    Illustration: "/galeri/katalog/foto-safety-1.jpeg",
+    bgFrom: "#200a00",
+    bgTo: "#3a1000",
+    minOrder: "Min. 6 pcs",
+    startPrice: "Rp 195.000",
+  },
+  {
+    name: "Baju Chef",
+    desc: "Baju chef untuk restoran dan kitchen.",
+    tag: "Industri",
+    tagColor: "#3b82f6",
+    Illustration: "/galeri/katalog/foto-chef-1.jpeg",
+    bgFrom: "#000d20",
+    bgTo: "#001a3a",
+    minOrder: "Min. 6 pcs",
+    startPrice: "Rp 165.000",
+  },
+  {
+    name: "Souvenir",
+    desc: "Topi, payung, totebag, dan merchandise custom lainnya. Cocok untuk event & promosi.",
+    tag: "Serba Bisa",
+    tagColor: "#10b981",
+    Illustration: "/galeri/katalog/foto-souvenir-1.jpeg",
+    bgFrom: "#001a0d",
+    bgTo: "#00301a",
+    minOrder: "Min. 12 pcs",
+    startPrice: "",
   },
 ];
 
@@ -480,9 +513,11 @@ export default function KatalogSection() {
                   <div className="flex items-center justify-between text-sm mt-auto pt-3 border-t border-white/6">
                     <div>
                       {/* <span className="text-[#8888a0] text-xs">{product.minOrder}</span> */}
-                      <div className="text-white text-lg font-semibold">
-                        Mulai {product.startPrice}
-                      </div>
+                      {product.startPrice && (
+                        <div className="text-white text-lg font-semibold">
+                          Mulai {product.startPrice}
+                        </div>
+                      )}
                     </div>
                     <a
                       href={`${waBase}?${waMsg}`}

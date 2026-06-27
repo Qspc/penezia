@@ -36,7 +36,7 @@ export default function ProductionSection() {
 
         {/* ================= CONTENT ================= */}
 
-        <div className="grid lg:grid-cols-[1fr_1.47fr] gap-6 items-start">
+        <div className="grid lg:grid-cols-[1fr_0.96fr] gap-6 items-start">
           {/* VIDEO */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -60,9 +60,9 @@ export default function ProductionSection() {
 
             {/* Badge */}
             <div className="absolute top-5 left-5">
-              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-2 backdrop-blur">
+              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 md:px-4 md:py-2 px-2 py-1 backdrop-blur">
                 <span className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-sm font-medium text-white">Produksi Printing</span>
+                <span className="md:text-sm text-xs font-medium text-white">Produksi Printing</span>
               </div>
             </div>
           </motion.div>
@@ -82,9 +82,9 @@ export default function ProductionSection() {
                 className="w-full aspect-[16/9] object-cover transition duration-700 group-hover:scale-105"
               />
               <div className="absolute top-5 left-5">
-                <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-2 backdrop-blur">
+                <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 md:px-4 md:py-2 px-2 py-1 backdrop-blur">
                   <span className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-sm font-medium text-white">Produksi Jahit</span>
+                  <span className="md:text-sm text-xs font-medium text-white">Proses Jahit</span>
                 </div>
               </div>
             </div>
@@ -97,9 +97,9 @@ export default function ProductionSection() {
                   className="w-full aspect-[4/5] object-cover transition duration-700 group-hover:scale-105"
                 />
                 <div className="absolute top-5 left-5">
-                  <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-2 backdrop-blur">
+                  <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 md:px-4 md:py-2 px-2 py-1 backdrop-blur">
                     <span className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
-                    <span className="text-sm font-medium text-white">Produksi Jahit Otomatis</span>
+                    <span className="md:text-sm text-xs font-medium text-white">Proses Bordir</span>
                   </div>
                 </div>
               </div>
@@ -110,9 +110,39 @@ export default function ProductionSection() {
                   className="w-full aspect-[4/5] object-cover transition duration-700 group-hover:scale-105"
                 />
                 <div className="absolute top-5 left-5">
-                  <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-2 backdrop-blur">
+                  <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 md:px-4 md:py-2 px-2 py-1 backdrop-blur">
                     <span className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
-                    <span className="text-sm font-medium text-white">Produksi Packing</span>
+                    <span className="md:text-sm text-xs font-medium text-white">Stok Kain</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative overflow-hidden rounded-3xl border border-white/10">
+                <img
+                  src="/galeri/produksi/produksi-foto-6.jpeg"
+                  className="w-full aspect-[4/5] object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute top-5 left-5">
+                  <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 md:px-4 md:py-2 px-2 py-1 backdrop-blur">
+                    <span className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
+                    <span className="md:text-sm text-xs font-medium text-white">
+                      Proses Packing
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative overflow-hidden rounded-3xl border border-white/10">
+                <img
+                  src="/galeri/produksi/produksi-foto-5.jpeg"
+                  className="w-full aspect-[4/5] object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute top-5 left-5">
+                  <div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/60 md:px-4 md:py-2 px-2 py-1 backdrop-blur">
+                    <span className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse" />
+                    <span className="md:text-sm text-xs font-medium text-white">
+                      Proses Pengiriman
+                    </span>
                   </div>
                 </div>
               </div>

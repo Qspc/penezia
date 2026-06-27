@@ -38,9 +38,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 bg-gradient-to-br from-[#ff3c00] to-[#f5c542] rounded-lg flex items-center justify-center animate-pulse-glow">
-              <Zap size={18} className="text-white fill-white" />
-            </div>
+            <img src="/logo/logo-utama.png" className="w-10 h-10 brightness-0 invert" />{" "}
             <span className="font-display text-2xl text-white tracking-widest">
               PENEZIA
               {/* <span className="text-[#ff3c00]">CRAFT</span> */}
