@@ -45,7 +45,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="lg:col-span-2">
           <a href="#hero" className="flex items-center gap-2 mb-5">
-            <img src="/logo/logo-utama.png" className="w-10 h-10 brightness-0 invert" />{" "}
+            <img src="/logo/logo-putih.png" className="w-10 h-10 " />{" "}
             <span className="font-display text-2xl text-white tracking-widest">
               PENEZIA
               {/* <span className="text-[#ff3c00]">CRAFT</span> */}
