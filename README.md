@@ -19,15 +19,8 @@ app/components/environment/contact.tsx
 Di dalam file tersebut Anda dapat mengubah:
 
 - Nomor WhatsApp
-- Email
-- Alamat
-- Link Google Maps
 - Instagram
-- Facebook
 - TikTok
-- Shopee
-- Tokopedia
-- Link marketplace lainnya
 
 > Setelah mengubah data, simpan file lalu lakukan proses **Build & Deploy** agar perubahan tampil di website.
 
