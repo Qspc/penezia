@@ -1,36 +1,201 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PENEZIA Website
 
-## Getting Started
+Website resmi **PENEZIA - Percetakan Sahabat Custom Purwakarta**.
 
-First, run the development server:
+Website ini dibuat menggunakan **Next.js** dan seluruh aset (gambar, logo, dan informasi kontak) dapat diperbarui dengan mudah tanpa perlu mengubah banyak kode.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+# Panduan Mengubah Konten Website
+
+## 1. Mengubah Kontak, WhatsApp, Email, dan Media Sosial
+
+Lokasi file:
+
+```
+app/components/environment/contact.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Di dalam file tersebut Anda dapat mengubah:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Nomor WhatsApp
+- Email
+- Alamat
+- Link Google Maps
+- Instagram
+- Facebook
+- TikTok
+- Shopee
+- Tokopedia
+- Link marketplace lainnya
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> Setelah mengubah data, simpan file lalu lakukan proses **Build & Deploy** agar perubahan tampil di website.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 2. Mengganti Gambar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Seluruh gambar berada di folder:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+public/
+```
 
-## Deploy on Vercel
+Di dalamnya terdapat beberapa folder sesuai kebutuhan, misalnya:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+public/
+│
+├── hero/
+├── logo/
+├── product/
+├── gallery/
+├── team/
+└── ...
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Cara mengganti gambar:
+
+1. Masuk ke folder yang sesuai.
+2. Ganti gambar lama dengan gambar baru.
+3. Gunakan **nama file yang sama** agar tidak perlu mengubah kode.
+
+Contoh:
+
+```
+public/logo/logo-utama.png
+```
+
+Jika ingin mengganti logo, cukup timpa file tersebut dengan logo baru menggunakan nama file yang sama.
+
+---
+
+## 3. Mengubah Metadata Website (SEO)
+
+Lokasi:
+
+```
+app/layout.tsx
+```
+
+Di sini dapat diubah informasi seperti:
+
+- Judul Website
+- Deskripsi Website
+- Keyword Google
+- Informasi Open Graph (Preview saat dibagikan ke WhatsApp/Facebook)
+
+Contoh:
+
+```ts
+title:
+description:
+keywords:
+```
+
+---
+
+## 4. Mengubah Produk
+
+Lokasi data produk:
+
+```
+app/components/environment/
+```
+
+atau pada file yang berkaitan dengan daftar produk.
+
+Di sini dapat mengubah:
+
+- Nama produk
+- Deskripsi
+- Harga (jika digunakan)
+- Gambar produk
+
+---
+
+## 5. Mengubah Testimoni
+
+Lokasi:
+
+```
+app/components/environment/
+```
+
+File testimoni berisi:
+
+- Nama pelanggan
+- Isi testimoni
+- Foto (jika ada)
+
+---
+
+## 6. Mengubah FAQ
+
+Lokasi:
+
+```
+app/components/environment/
+```
+
+Di sini dapat menambah, menghapus, atau mengubah pertanyaan dan jawaban yang muncul pada halaman FAQ.
+
+---
+
+## 7. Mengubah Link Navigasi
+
+Lokasi:
+
+```
+app/components/
+```
+
+Biasanya berada pada komponen:
+
+- Navbar
+- Footer
+
+---
+
+# Struktur Folder Penting
+
+```
+app/
+│
+├── components/
+│   ├── environment/
+│   │     ├── contact.tsx
+│   │     ├── product.ts
+│   │     ├── testimonial.ts
+│   │     └── faq.ts
+│   │
+│   ├── navbar/
+│   ├── footer/
+│   └── ...
+│
+public/
+│
+├── hero/
+├── logo/
+├── gallery/
+├── product/
+└── ...
+```
+
+---
+
+# Tips
+
+✅ Gunakan ukuran gambar yang tidak terlalu besar agar website tetap cepat.
+
+✅ Jangan mengubah nama folder.
+
+✅ Jika hanya mengganti gambar, sebaiknya gunakan nama file yang sama.
+
+✅ Setelah melakukan perubahan, lakukan proses **Build** dan **Deploy** agar perubahan muncul di website.
+
+---
+
+# Catatan
+
+Apabila terjadi error setelah melakukan perubahan, kembalikan file seperti semula atau hubungi developer.
